@@ -51,14 +51,3 @@ class WeightedQuickUnionUF
 			}	
 		}	
 };
-
-int main()
-{
-	int N;
-	cout << "Enter number of components: ";
-	cin >> N; 	
-	WeightedQuickUnionUF UnionFind(N);
-	UnionFind.doUnion(1,3);
-	cout << UnionFind.isConnected(1,3) << endl;
-	return 0;
-}
