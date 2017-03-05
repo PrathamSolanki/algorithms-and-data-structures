@@ -15,14 +15,14 @@ class QuickUnionUF
 		}
 
 	public:
-		QuickUnionUF(int N)
+		QuickUnionUF (int N)
 		{	
 			id = new int[N];
 			for(int i = 0; i < N; i++)
 				id[i] = i;
 		}
 
-		bool isConnected(int p, int q)
+		bool isConnected (int p, int q)
 		{
 			if (p == q) {
 				return true;
@@ -31,7 +31,7 @@ class QuickUnionUF
 			}
 		}
 
-		void doUnion(int p, int q)
+		void doUnion (int p, int q)
 		{
 			if (p == q) {
 				return;

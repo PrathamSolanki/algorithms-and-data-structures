@@ -8,7 +8,7 @@ class WeightedQuickUnionUF
 		int *id = NULL;
 		int *size = NULL;
 
-		int root(int i)
+		int root (int i)
 		{
 			while (i != id[i]) {
 				i = id[i];
@@ -18,7 +18,7 @@ class WeightedQuickUnionUF
 		}
 
 	public:
-		WeightedQuickUnionUF(int N)
+		WeightedQuickUnionUF (int N)
 		{	
 			id = new int[N];
 			size = new int[N];
@@ -28,7 +28,7 @@ class WeightedQuickUnionUF
 			}
 		}
 
-		bool isConnected(int p, int q)
+		bool isConnected (int p, int q)
 		{
 			if (p == q) {
 				return true;
@@ -37,7 +37,7 @@ class WeightedQuickUnionUF
 			}
 		}
 
-		void doUnion(int p, int q)
+		void doUnion (int p, int q)
 		{
 			int rootp = root(p);
 			int rootq = root(q);

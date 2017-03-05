@@ -10,12 +10,12 @@ class BinarySearch
 	public:
 		int mid;
 
-		BinarySearch()
+		BinarySearch ()
 		{
 			mid = high = low = 0;
 		}
 
-		int search(int *SortedArray, int N, int x)
+		int search (int *SortedArray, int N, int x)
 		{
 			high = N - 1;
 			
