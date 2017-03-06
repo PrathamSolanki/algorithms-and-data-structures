@@ -106,7 +106,7 @@ class SinglyLinkedList
 
 		void InsertAtPos (int pos, int value)
 		{
-			if (pos > 1  && pos < size()) {
+			if (pos > 1  && pos <= size()) {
 				Node *NewNode, *TraversalNode, *ptr;
 
 				NewNode = CreateNode(value);
@@ -124,9 +124,6 @@ class SinglyLinkedList
 			else if (pos == 1)
 				InsertAtFirst(value);
 
-			else if (pos == size())
-				InsertAtLast (value);
-
 			else
 				cout << "Insert Position out of range." << endl;
 		}
@@ -142,12 +139,12 @@ class SinglyLinkedList
 
 		void DeleteAtLast ()
 		{
-			Node *temp = start;
+			Node *TraversalNode = start;
 
-			while ((temp->next)->next != NULL)
-				temp = temp->next;
+			while ((TraversalNode->next)->next != NULL)
+				TraversalNode = TraversalNode->next;
 
-			temp->next = NULL;			
+			TraversalNode->next = NULL;			
 		}
 
 		void DeleteAtPos (int pos)
@@ -167,9 +164,6 @@ class SinglyLinkedList
 
 			else if (pos == 1)
 				DeleteAtFirst ();
-
-			else if (pos == size())
-				DeleteAtLast ();
 
 			else
 				cout << "Insert Position out of range." << endl;			
@@ -196,3 +190,19 @@ class SinglyLinkedList
 			return 0;
 		}
 };
+
+int main()
+{
+	SinglyLinkedList obj;
+
+	obj.InsertAtFirst(1);
+	obj.InsertAtLast(5);
+	obj.InsertAtPos(2,2);
+	obj.InsertAtPos(3,3);
+	obj.InsertAtPos(4,4);
+	obj.display();
+	obj.DeleteAtFirst();
+	obj.DeleteAtLast();
+	obj.display();
+	return 0;
+}
