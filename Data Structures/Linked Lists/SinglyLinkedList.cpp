@@ -174,26 +174,25 @@ class SinglyLinkedList
 			else
 				cout << "Insert Position out of range." << endl;			
 		}
+
+		int search (int value)
+		{
+			if (start == NULL) {
+				cout << "The Linked List is empty." << endl;	
+				return 0;
+			}
+
+			else {
+				Node *TraversalNode = start;
+				int count = 0;
+	
+				while (TraversalNode->data != value) {
+					TraversalNode = TraversalNode->next;
+					count++;
+				}		
+
+				return count;
+			}
+			return 0;
+		}
 };
-
-int main()
-{
-	SinglyLinkedList obj;
-
-	obj.display();
-	obj.InsertAtFirst(4);
-	obj.InsertAtLast(4);
-	obj.display();
-	obj.InsertAtPos(4,4);
-	obj.InsertAtPos(1,4);
-	obj.InsertAtPos(2,2);
-	obj.InsertAtLast(5);
-	obj.display();
-	obj.DeleteAtFirst();
-	obj.display();
-	obj.DeleteAtLast();
-	obj.display();
-	obj.DeleteAtPos(2);
-	obj.display();
-	return 0;
-}
