@@ -44,12 +44,12 @@ class SinglyLinkedList
 			}
 
 			int count = 0;		
-			Node *temp;
-			temp = start;
+			Node *TraversalNode;
+			TraversalNode = start;
 
-			while (temp != NULL) {
+			while (TraversalNode != NULL) {
 				count++;
-				temp = temp->next;
+				TraversalNode = TraversalNode->next;
 			}
 			return count;
 		}
@@ -61,12 +61,12 @@ class SinglyLinkedList
 				return;
 			}
 		
-			Node *temp;
-			temp = start;
+			Node *TraversalNode;
+			TraversalNode = start;
 
-			while (temp != NULL) {
-				cout << temp->data << "->";
-				temp = temp->next;
+			while (TraversalNode != NULL) {
+				cout << TraversalNode->data << "->";
+				TraversalNode = TraversalNode->next;
 			}
 			cout << "NULL" << endl;
 		}
