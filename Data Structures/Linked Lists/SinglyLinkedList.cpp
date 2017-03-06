@@ -190,19 +190,3 @@ class SinglyLinkedList
 			return 0;
 		}
 };
-
-int main()
-{
-	SinglyLinkedList obj;
-
-	obj.InsertAtFirst(1);
-	obj.InsertAtLast(5);
-	obj.InsertAtPos(2,2);
-	obj.InsertAtPos(3,3);
-	obj.InsertAtPos(4,4);
-	obj.display();
-	obj.DeleteAtFirst();
-	obj.DeleteAtLast();
-	obj.display();
-	return 0;
-}
