@@ -59,9 +59,16 @@ class Stack
 		{
 			Node *NewTop;
 			NewTop = CreateNode(value);	
+			
+			if (top == NULL) {
+				top = NewTop;
+				top->next = NULL;
+			}
 
-			NewTop->next = top;
-			top = NewTop;
+			else {
+				NewTop->next = top;
+				top = NewTop;
+			}
 		}
 	
 		void pop ()
@@ -84,9 +91,9 @@ class Stack
 int main ()
 {
 	Stack obj;
-	obj.push(4);
-	obj.push(4);
-	obj.push(4);
+	obj.push(1);
+	obj.push(2);
+	obj.push(3);
 	obj.display();
 	obj.pop();
 	obj.display();
