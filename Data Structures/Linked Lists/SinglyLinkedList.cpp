@@ -73,20 +73,12 @@ class SinglyLinkedList
 
 		void InsertAtFirst (int value)
 		{
-			Node *NewFirst, *OldFirst;
+			Node *NewFirst;
 	
 			NewFirst = CreateNode(value);
 
-			if (start == NULL) {
-				start = NewFirst;
-				start->next = NULL;
-			}
-
-			else {
-				OldFirst = start;
-				start = NewFirst;
-				start->next = OldFirst;
-			}
+			NewFirst->next = start;
+			start = NewFirst;
 		}	
 
 		void InsertAtLast (int value)
