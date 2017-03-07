@@ -2,13 +2,11 @@
 
 BinarySearch::BinarySearch ()
 {
-	mid = high = low = 0;
+	mid = 0;
 }
 
-int BinarySearch::search (int *SortedArray, int N, int x)
+int BinarySearch::search (int *SortedArray, int low, int high, int x)
 {
-	high = N - 1;
-		
 	while (low <= high) {
 		mid = low + (high - low) / 2;
 

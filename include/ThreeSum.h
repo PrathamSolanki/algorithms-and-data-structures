@@ -3,11 +3,6 @@
 
 class ThreeSum
 {
-	private:
-		int high, mid, low;
-
-		bool BinarySearch (int *SortedArray, int low, int high, int x);
-
 	public:
 		int count;
 

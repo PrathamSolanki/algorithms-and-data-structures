@@ -3,15 +3,12 @@
 
 class BinarySearch
 {
-	private:
-		int high, low;
-
 	public:
 		int mid;
 
 		BinarySearch ();
 
-		int search (int *SortedArray, int N, int x);
+		int search (int *SortedArray, int low, int high, int x);
 };
 
 #endif
