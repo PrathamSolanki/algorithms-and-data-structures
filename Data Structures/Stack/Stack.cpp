@@ -37,9 +37,18 @@ class Stack
 			}
 		}
 
+		bool isEmpty ()
+		{
+			if (top == NULL)
+				return true;
+
+			else
+				return false;
+		}
+
 		void display ()
 		{
-			if (top == NULL) {
+			if (isEmpty()) {
 				cout << "The Stack is empty." << endl;
 				return;
 			}
@@ -60,7 +69,7 @@ class Stack
 			Node *NewTop;
 			NewTop = CreateNode(value);	
 			
-			if (top == NULL) {
+			if (isEmpty()) {
 				top = NewTop;
 				top->next = NULL;
 			}
@@ -73,7 +82,7 @@ class Stack
 	
 		void pop ()
 		{
-			if (top == NULL) {
+			if (isEmpty()) {
 				cout << "The Stack is empty." << endl;
 				return;
 			}
@@ -86,16 +95,15 @@ class Stack
 				delete(NewTop);
 			}
 		}
-};
 
-int main ()
-{
-	Stack obj;
-	obj.push(1);
-	obj.push(2);
-	obj.push(3);
-	obj.display();
-	obj.pop();
-	obj.display();
-	return 0;
-}
+		int peek ()
+		{
+			if (isEmpty()) {
+				cout << "The Stack is empty." << endl;
+				return -1;
+			}
+
+			else 
+				return top->data;
+		}
+};
