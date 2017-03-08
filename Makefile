@@ -9,4 +9,7 @@ TESTDIR = ./test
 EXEDIR = ./bin
 
 BinarySearchTest: $(TESTDIR)/BinarySearchTest.cpp $(SRCDIR)/BinarySearch.cpp
+	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
+
+ThreeSumTest: $(TESTDIR)/ThreeSumTest.cpp $(SRCDIR)/ThreeSum.cpp $(SRCDIR)/BinarySearch.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR) 
