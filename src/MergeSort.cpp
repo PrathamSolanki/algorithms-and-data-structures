@@ -1,10 +1,5 @@
 #include "MergeSort.h"
 
-MergeSort::MergeSort ()
-{
-	mid = 0;
-}
-
 void MergeSort::MergeArrays (int *Array, int low, int mid, int high)
 {
 	int i, j, k;
@@ -34,7 +29,7 @@ void MergeSort::MergeArrays (int *Array, int low, int mid, int high)
 void MergeSort::PartitionArray (int *Array, int low, int high)
 {
 	if (low < high) {
-		mid = low + (high - low)/2;
+		int mid = low + (high - low)/2;
 
 		PartitionArray (Array,low, mid);
 		PartitionArray (Array,mid+1, high);

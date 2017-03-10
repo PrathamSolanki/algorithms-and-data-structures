@@ -4,8 +4,6 @@
 class MergeSort
 {
 	private:
-		int mid;
-
 		int *AuxillaryArray;
 	
 		void MergeArrays (int *Array, int low, int mid, int high);
@@ -13,8 +11,6 @@ class MergeSort
 		void PartitionArray (int *Array, int low, int high);
 
 	public:
-		MergeSort ();
-
 		void sort (int *Array, int N);
 };
 
