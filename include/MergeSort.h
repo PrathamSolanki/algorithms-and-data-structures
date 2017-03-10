@@ -4,7 +4,7 @@
 class MergeSort
 {
 	private:
-		int *AuxillaryArray;
+		int *AuxiliaryArray;
 	
 		void MergeArrays (int *Array, int low, int mid, int high);
 

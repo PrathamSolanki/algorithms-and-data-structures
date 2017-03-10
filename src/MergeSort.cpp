@@ -10,20 +10,20 @@ void MergeSort::MergeArrays (int *Array, int low, int mid, int high)
 	for (k = low; k <= high; k++)
 	{
 		if (i > mid)
-			AuxillaryArray[k] = Array[j++];
+			AuxiliaryArray[k] = Array[j++];
 
 		else if (j > high)
-			AuxillaryArray[k] = Array[i++];	
+			AuxiliaryArray[k] = Array[i++];	
 
 		else if (Array[i] < Array[j])
-			AuxillaryArray[k] = Array[i++];
+			AuxiliaryArray[k] = Array[i++];
 
 		else
-			AuxillaryArray[k] = Array[j++];
+			AuxiliaryArray[k] = Array[j++];
 	}	
 
 	for (k = low; k <= high; k++)
-		Array[k] = AuxillaryArray[k];
+		Array[k] = AuxiliaryArray[k];
 }
 
 void MergeSort::PartitionArray (int *Array, int low, int high)
@@ -42,7 +42,7 @@ void MergeSort::PartitionArray (int *Array, int low, int high)
 
 MergeSort::MergeSort (int *Array, int N)
 {
-	AuxillaryArray = new int[N];
+	AuxiliaryArray = new int[N];
 	
 	PartitionArray(Array, 0, N-1);
 }
