@@ -7,7 +7,8 @@ EXEDIR     = ./bin
 
 all: BinarySearchTest \
      ThreeSumTest \
-     MergeSortTest
+     MergeSortTest \
+     QuickSortTest
 
 BinarySearchTest: $(TESTDIR)/BinarySearchTest.cpp $(SRCDIR)/BinarySearch.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
