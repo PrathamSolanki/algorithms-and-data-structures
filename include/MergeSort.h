@@ -11,7 +11,7 @@ class MergeSort
 		void PartitionArray (int *Array, int low, int high);
 
 	public:
-		void sort (int *Array, int N);
+		MergeSort (int *Array, int N);
 };
 
 #endif

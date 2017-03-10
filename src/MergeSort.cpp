@@ -40,7 +40,7 @@ void MergeSort::PartitionArray (int *Array, int low, int high)
 		return;
 }
 
-void MergeSort::sort (int *Array, int N)
+MergeSort::MergeSort (int *Array, int N)
 {
 	AuxillaryArray = new int[N];
 	
