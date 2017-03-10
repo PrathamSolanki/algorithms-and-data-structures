@@ -6,11 +6,11 @@ class MergeSort
 	private:
 		int mid;
 
-		int *OriginalArray, *AuxillaryArray;
+		int *AuxillaryArray;
 	
-		void MergeArrays (int low, int mid, int high);
+		void MergeArrays (int *Array, int low, int mid, int high);
 
-		void PartitionArray (int low, int high);
+		void PartitionArray (int *Array, int low, int high);
 
 	public:
 		MergeSort ();
