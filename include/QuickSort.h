@@ -8,6 +8,8 @@ class QuickSort
 
 		int partition (int *Array, int low, int high);
 
+		void swap (int *Array, int a, int b);
+
 	public:
 		 QuickSort (int *Array, int N);
 };

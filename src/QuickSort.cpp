@@ -1,5 +1,12 @@
 #include "QuickSort.h"
 
+void QuickSort::swap (int *Array, int a, int b)
+{
+	int temp = Array[a];
+	Array[a] = Array[b];
+	Array[b] = temp;
+}
+
 int QuickSort::partition (int *Array, int low, int high)
 {
 	int i = low;
@@ -12,7 +19,7 @@ int QuickSort::partition (int *Array, int low, int high)
 				break;
 		}
 
-		while (Array[--i] > pivot) {
+		while (Array[--j] > pivot) {
 			if (j == low)
 				break;
 		}
@@ -20,14 +27,10 @@ int QuickSort::partition (int *Array, int low, int high)
 		if (i >= j)
 			break;
 
-		int temp = Array[i];
-		Array[i] = Array[j];
-		Array[j] = temp;
+		swap(Array,i,j);	
 	}
 
-	int temp = Array[low];
-	Array[low] = Array[j];
-	Array[j] = temp;
+	swap(Array,low,j);
 
 	return j;
 }
