@@ -8,7 +8,8 @@ EXEDIR     = ./bin
 all: BinarySearchTest \
      ThreeSumTest \
      MergeSortTest \
-     QuickSortTest
+     QuickSortTest \
+     BubbleSortTest
 
 BinarySearchTest: $(TESTDIR)/BinarySearchTest.cpp $(SRCDIR)/BinarySearch.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
@@ -20,4 +21,7 @@ MergeSortTest: $(TESTDIR)/MergeSortTest.cpp $(SRCDIR)/MergeSort.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
 
 QuickSortTest: $(TESTDIR)/QuickSortTest.cpp $(SRCDIR)/QuickSort.cpp
-	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)  
+	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
+
+BubbleSortTest: $(TESTDIR)/BubbleSortTest.cpp $(SRCDIR)/BubbleSort.cpp
+	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)   
