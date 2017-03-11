@@ -9,7 +9,8 @@ all: BinarySearchTest \
      ThreeSumTest \
      MergeSortTest \
      QuickSortTest \
-     BubbleSortTest
+     BubbleSortTest \
+     SelectionSortTest
 
 BinarySearchTest: $(TESTDIR)/BinarySearchTest.cpp $(SRCDIR)/BinarySearch.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
@@ -24,4 +25,7 @@ QuickSortTest: $(TESTDIR)/QuickSortTest.cpp $(SRCDIR)/QuickSort.cpp
 	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
 
 BubbleSortTest: $(TESTDIR)/BubbleSortTest.cpp $(SRCDIR)/BubbleSort.cpp
-	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)   
+	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)
+
+SelectionSortTest: $(TESTDIR)/SelectionSortTest.cpp $(SRCDIR)/SelectionSort.cpp
+	$(CXX) -o $(EXEDIR)/$@ $^ $(INCLUDEDIR)    
